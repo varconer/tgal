@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<title>Галерея-мозайка</title>
+<meta charset="utf-8" />
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+<script src="dist/jquery.vc.tgal.min.js"></script>
+<script>
+$(window).load(function(){
+	tGal('.tgal', '.tgal img', 2, 500);
+});
+$(window).resize(function(){
+	tGal('.tgal', '.tgal img', 2, 500);
+});
+</script>
+<style>
+body {
+	background-color: black;
+}
+.tgal {
+	display: flex;
+	flex-wrap: wrap;
+	line-height: 0;
+}
+img {
+	border: 1px solid white;
+	margin: 0;
+	padding: 0;
+}
+.wrap {
+	padding: 100px;
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+<div class="tgal">
+	<div><img src='images/1.jpg'></div>
+	<div><img src='images/2.jpg'></div>
+	<div><img src='images/3.jpg'></div>
+	<div><img src='images/4.jpg'></div>
+	<div><img src='images/5.jpg'></div>
+	<div><img src='images/1.jpg'></div>
+	<div><img src='images/2.jpg'></div>
+	<div><img src='images/3.jpg'></div>
+</div>
+</div>
+</body>
+</html>
